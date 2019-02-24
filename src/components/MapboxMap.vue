@@ -65,7 +65,8 @@ export default {
         /* Create the map object from store properties */
         const map = new mapboxgl.Map({
           container: 'map',
-          style: carto.basemaps.voyager,
+          // style: carto.basemaps.darkmatter,
+          style: carto.basemaps.positron,
           zoom: this.zoom,
           center: this.center,
           hash: true

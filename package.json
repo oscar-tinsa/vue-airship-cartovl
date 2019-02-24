@@ -10,6 +10,7 @@
     "deploy": "now alias $(now) vue-airship-cartovl"
   },
   "dependencies": {
+    "@amcharts/amcharts4": "^4.1.10",
     "@carto/airship-components": "^1.0.3",
     "@carto/airship-icons": "^1.0.3",
     "@carto/airship-style": "^1.0.3",

@@ -2,6 +2,9 @@
   <as-responsive-content>
     <aside class="as-sidebar as-sidebar--right" data-name="Widgets">
       <div class="as-container as-container--scrollable">
+        <histogram-widget
+          :valueM=80 :valueW=20 :formatter=numbFormatter
+        />
         <formula-widget
           ref="countries_pop" class="js-worldborders-widget" title="Population" unit="Inhabitants"
           :value=countriesPop :formatter=numbFormatter :error=isCountriesDisabled
@@ -46,6 +49,7 @@ import { mapState, mapActions } from 'vuex'
 import FormulaWidget from '@/components/widgets/FormulaWidget'
 import CategoryWidget from '@/components/widgets/CategoryWidget'
 import LayerSelector from '@/components/widgets/LayerSelector'
+import HistogramWidget from '@/components/widgets/HistogramWidget'
 import MapboxMap from '@/components/MapboxMap'
 
 export default {
@@ -55,6 +59,7 @@ export default {
   components: {
     MapboxMap,
     FormulaWidget,
+    HistogramWidget,
     CategoryWidget,
     LayerSelector
   },
@@ -129,7 +134,7 @@ export default {
       this.countriesPop = countriesPop
       this.countriesEconomiesCat = countriesEconomiesCat
     },
-    onUpdatePopulatedPlaces: function ({ populatedPlacesCat }) {
+    onUpdatePopulatedPlaces: function ({ populatedPlacesCat}) {
       this.populatedPlacesCat = populatedPlacesCat
     },
     /* Update the visualization when categories are selected on the widget */
@@ -153,22 +158,20 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="css">
-@import "~mapbox-gl/dist/mapbox-gl.css";
-
-#map {
-  height: 100vh;
-  width: 100%;
-}
-
-.mapboxgl-popup-tip {
-  border-top-color: red;
-}
-.mapboxgl-popup-content {
-  background: none;
-}
-.as-infowindow {
-  color: red;
-  background-color: red;
-}
+<style lang="css">
+  @import "~mapbox-gl/dist/mapbox-gl.css";
+  #map {
+    height: 100vh;
+    width: 100%;
+  }
+  .mapboxgl-popup-tip {
+    border-top-color: red;
+  }
+  .mapboxgl-popup-content {
+    background: none;
+  }
+  .as-infowindow {
+    color: red;
+    background-color: red;
+  }
 </style>
