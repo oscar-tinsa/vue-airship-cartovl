@@ -1,10 +1,5 @@
 <template>
   <as-responsive-content>
-    <aside class="as-sidebar as-sidebar--left" data-name="Legend">
-      <div class="as-container as-container--scrollable">
-        <layer-selector :layers=layers />
-      </div>
-    </aside>
     <aside class="as-sidebar as-sidebar--right" data-name="Widgets">
       <div class="as-container as-container--scrollable">
         <formula-widget
@@ -27,6 +22,11 @@
           :show-clear=true :categories=countriesEconomiesCat :is-loading=isCategoriesLoading
           :error=isCountriesDisabled v-on:new-categories="onNewCategories"
         />
+      </div>
+    </aside>
+    <aside class="as-sidebar as-sidebar--right" data-name="Legend">
+      <div class="as-container as-container--scrollable">
+        <layer-selector :layers=layers />
       </div>
     </aside>
     <main class="as-main">

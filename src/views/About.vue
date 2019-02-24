@@ -1,19 +1,13 @@
 <template>
   <div class="as-container">
     <div class="as-box">
-      <h1 class="as-title">Testing Vue with Airship and CARTO VL</h1>
-
+      <h1 class="as-title">Tinsa Digital - Airship and CARTO VL</h1>
       <p class="as-body">
-        This website is an experiment to build a non-trivial application using Vue.js along with
-        the most recent front-end libraries developed by the <a href="https://carto.com">CARTO</a>
-        Engineering team.
+        This website is an experiment to build a non-trivial application using Vue.js along with the most recent front-end.
       </p>
-
       <ul class="as-list">
-        <li class="as-list__item"><a href="https://github.com/jsanz/vue-airship-cartovl">Source code in github</a></li>
         <li class="as-list__item"><a href="https://carto.com/developers/carto-vl/">CARTO VL documentation</a></li>
         <li class="as-list__item"><a href="https://carto.com/developers/airship/">Airship documentation</a></li>
-
       </ul>
     </div>
     <div class="as-box">
